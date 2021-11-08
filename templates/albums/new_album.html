@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>New Album</h1>
+<h1 class='pl3'>New Album</h1>
 
-<div>
+<div class='pl3'>
   <form action="{% url 'new_album' %}" method="POST">
     {% csrf_token %}
     {{ form.as_p }}

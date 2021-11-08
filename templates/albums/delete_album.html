@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Delete Album</h1>
+<h1 class='pl3'>Delete Album</h1>
 
-<div>
+<div class='pl3'>
   <form action="{% url 'delete_album' pk=album.pk %}" method="POST">
     {% csrf_token %}
-    <p>Are you sure you want to remove {{ album.title }}?</p>
+    <p>Are you sure you want to remove <span class="b">{{ album.title }}</span>?</p>
     <div>
-      <button type="submit">Delete Album</button><br />
+      <button class='mb3' type="submit">Delete Album</button><br />
       <a href="{% url 'list_albums' %}">Cancel</a>
     </div>
   </form>
