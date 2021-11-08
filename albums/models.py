@@ -6,7 +6,7 @@ class Album(models.Model):
     artist = models.CharField(max_length=255, blank=True, null=True)
     # artist = models.ForeignKey(
     #     'Album', on_delete=models.CASCADE, default=None,)
-    year_published = models.IntegerField(max_length=4, blank=True, null=True)
+    year_published = models.IntegerField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
