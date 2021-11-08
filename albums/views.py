@@ -40,5 +40,5 @@ def delete_album(request, pk):
         album.delete()
         return redirect(to='list_albums')
 
-    return render(request, "album/delete_album.html",
+    return render(request, "albums/delete_album.html",
                   {"album": album})
